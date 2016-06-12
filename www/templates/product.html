@@ -1,0 +1,54 @@
+  <!--  <ion-nav-bar class="bar-stable">-->
+  <!--        <ion-nav-title>-->
+  <!--    {{product.name}}-->
+  <!--  </ion-nav-title>-->
+		<!--	<ion-nav-back-button>-->
+		<!--	</ion-nav-back-button>-->
+
+		<!--	<ion-nav-buttons side="left">-->
+		<!--		<button class="button button-icon button-clear ion-navicon" menu-toggle="left">-->
+		<!--		</button>-->
+		<!--	</ion-nav-buttons>-->
+		<!--</ion-nav-bar>		-->
+<ion-view >
+	    <ion-nav-title>
+      {{product.name}}
+    </ion-nav-title>
+        <ion-content class="padding has-header">
+        	<ion-slide-box>
+			  <ion-slide ng-repeat="image in product.images">
+			  	<img width="100%" ng-src="data:image/jpeg;base64,{{image}}" />
+			</ion-slide>
+			  <!--<ion-slide><img width="100%" src="http://geerhunter.com/app/assets/ecommerce/1.jpg" /></ion-slide>-->
+			  <!--<ion-slide><img width="100%" src="http://geerhunter.com/app/assets/ecommerce/1.jpg" /></ion-slide>-->
+			  <!--<ion-slide><img width="100%" src="http://geerhunter.com/app/assets/ecommerce/1.jpg" /></ion-slide>-->
+			</ion-slide-box>
+		
+		<button class="button button-block button-positive" ng-click="newConversation()">
+			<i class="icon ion-ios-cart"></i> Make Offer
+		</button>
+		<ul class="list">
+		    <li class="item">{{product.name}}</li>
+		    <li class="padding"><p>{{product.description}}</p></li>
+		    <li class="item">{{product.price | currency : product.currency  : 2 }}</li>
+		</ul>
+		
+		
+		
+<div class="row">
+  <div class="col">.col</div>
+  <div class="col">.col</div>
+  <div class="col">.col</div>
+</div>
+<div class="row">
+  <div class="col">.col</div>
+  <div class="col">.col</div>
+  <div class="col">.col</div>
+</div>
+
+<br />
+<br />
+<br />
+
+          </ion-content>
+      </ion-view>

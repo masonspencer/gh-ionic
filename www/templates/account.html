@@ -1,0 +1,81 @@
+<ion-view >
+  <ion-nav-title>
+		Account
+  </ion-nav-title>
+        <ion-content class="padding has-header">
+      <div class="row-fluid">
+      <div class="col-md-4">
+      <form role="form">
+        <div class="item item-divider">
+          Change Password
+        </div>
+      
+        <p class="form-group">
+          <label class="item item-input">
+            <input type="password" placeholder="Old Password" ng-keypress="clear()" ng-model="oldpass" class="form-control" />
+          </label>
+          <label class="item item-input">
+            <input type="password" placeholder="New Password" ng-keypress="clear()" ng-model="newpass" class="form-control" />
+          </label>
+          <label class="item item-input">
+            <input type="password" placeholder="Confirm New Password" ng-keypress="clear()" ng-model="confirm" class="form-control" />
+          </label>
+        
+        <button class="button button-full button-positive" ng-click="changePassword(oldpass, newpass, confirm)">change password</button>
+        </p>
+        <p class="error" ng-show="err">{{err}}</p>
+        <p class="good" ng-show="msg">{{msg}}</p>
+      </form>
+      </div>
+      
+      <div>
+      <form>
+        <div class="item item-divider">
+          Change Email
+        </div>
+      
+        <p class="form-group">
+          <label class="item item-input">
+            <input type="text" placeholder="New Email" ng-keypress="clear()" ng-model="newEmail" class="form-control" />
+          </label>
+          <label class="item item-input">
+            <input type="password" placeholder="Password" ng-keypress="clear()" ng-model="pass" class="form-control" />
+          </label>
+        </p>
+        <button class="button button-full button-positive" ng-click="changeEmail(pass, newEmail)">update email</button>
+      </form>
+      </div>
+      
+      </div>
+      <p class="clearfix"></p>
+      <div ng-repeat="message in messages" class="alert alert-{{message.type}}">{{message.text}}</div>
+      
+      <br />
+      
+      
+        <p>
+          <button class="button button-full button-assertive" role="button" ng-click="logout()" class="btn btn-danger">Log Out</button>
+        </p>
+      
+      
+      
+      
+        <!--<form role="form">-->
+        <!--  <p class="form-group">-->
+        <!--    <label>Account ID</label>-->
+        <!--    <br />{{user.uid}}-->
+        <!--  </p>-->
+      
+        <!--  <p class="form-group">-->
+        <!--    <label>Name:</label>-->
+        <!--    <input type="text" name="name" ng-model="profile.name" class="form-control" />-->
+        <!--  </p>-->
+      
+        <!--  <p class="form-group">-->
+        <!--    <label>Email:</label>-->
+        <!--    <br />{{profile.email}}-->
+        <!--  </p>-->
+        <!--</form>-->
+
+        </ion-content>
+</ion-view>

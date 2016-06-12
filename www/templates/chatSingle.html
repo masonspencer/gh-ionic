@@ -1,0 +1,28 @@
+<ion-view>
+	<ion-nav-title>
+	Chat
+	</ion-nav-title>
+	<ion-content class="padding has-header">
+		<ion-list show-delete="shouldShowDelete" type="list-inset">
+			<ion-item class="item-text-wrap" type="item-text-wrap" ng-repeat="message in messages">
+				<h4>{{message.userName}} :</h4>
+				<span am-time-ago="conversation.time" class="item-note">
+				</span>
+				<p>{{message.body}}</p>
+			</ion-item>
+			
+		</ion-list>
+			<ion-item class="item item-input-inset">
+				<label class="item-input-wrapper">
+					<input type="text" placeholder="Type in your message..."  ng-model="newMessage">
+				</label>
+				<button ng-click="addConversation(newMessage);newMessage = null;" class="button button-small button-balanced">
+					Send
+				</button>
+			</ion-item>
+			<br />
+			<br />
+			<br />
+  <p class="alert alert-danger" ng-show="err">{{err}}</p>
+   </ion-content>
+</ion-view>

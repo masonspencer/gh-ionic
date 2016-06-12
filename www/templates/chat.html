@@ -1,0 +1,16 @@
+<ion-view >
+<ion-nav-title>
+		Chat2
+  </ion-nav-title>
+        <ion-content class="padding has-header">
+ 
+<div class="list" ng-repeat="conversation in conversations">
+
+    <a class="item item-avatar" ui-sref="chatSingle({ conversationId: conversation[1] })">
+      <img src="{{conversation[3]}}">
+      <h2>{{conversation[2]}}</h2>
+      <p>{{conversation[0].body}}</p>
+    </a>
+</div>
+</ion-content>
+      </ion-view>

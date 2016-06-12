@@ -1,0 +1,30 @@
+<ion-view >
+	<ion-nav-title>
+	Feed
+	</ion-nav-title>
+        <ion-content class="padding has-header">
+          <!--<ul id="geerItems" ng-show="geerItems.length">-->
+          <!--  <li ng-repeat="geerItem in geerItems | reverse">{{geerItem.text}}</li>-->
+          <!--</ul>-->
+          
+
+<div class="item item-body" ng-repeat="product in products | reverse">
+      <p>{{product.name}}</p>
+      <p>{{product.price | currency : product.currency  : 2 }}</p>
+    <a ui-sref="product({ itemID: product.$id })">
+    <img class="full-image" ng-src="{{product.images[0]}}"></a>
+    <p>
+      {{product.description}}
+    </p>
+    <p>
+        <i class="ion-eye"></i>
+        <i class="ion-plus-circled"></i>
+    </p>
+  </div>
+  
+
+        </ion-content>
+</ion-view>
+
+
+

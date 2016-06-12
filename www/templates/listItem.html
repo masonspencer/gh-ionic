@@ -1,0 +1,37 @@
+<ion-view >
+	<ion-nav-title>
+	Create Item
+	</ion-nav-title>
+        <ion-content class="padding has-header">
+<form ng-submit="addItem(newItem)">
+	  <div class="list list-inset">
+	    <label class="item item-input">
+	      <input type="text" placeholder="Name" ng-model="newItem.name">
+	    </label>
+	    <label class="item item-input">
+	      <input type="text" placeholder="Price" ng-model="newItem.price">
+	    </label>
+	    <label class="item item-input">
+            <textarea placeholder="Description"  ng-model="newItem.description"></textarea>
+	    </label>
+	    <label class="item item-input">
+	      <input type="text" placeholder="Tags" ng-model="newItem.tags">
+	    </label>
+	  </div>
+	  <div class="padding">
+		<button class="button ion-camera button-block button-negative" ng-click="upload()">Take Picture</button>
+	    <button type="submit" class="button button-block button-positive">Submit</button>
+	  </div>
+</form>
+
+
+        <div class="row" ng-repeat="image in images">
+            <div class="col col-25">
+				<img ng-src="data:image/jpeg;base64,{{image}}" width="100%" />
+            </div>
+        </div>
+
+
+       </ion-content>
+</ion-view>
+

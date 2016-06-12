@@ -1,0 +1,56 @@
+<ion-view >
+	<ion-nav-title>
+	Log In
+	</ion-nav-title>
+  <ion-content class="padding has-header">
+
+<!--<fieldset>-->
+<!--  <legend>Oauth</legend>-->
+<!--  <p>-->
+<!--    <button  class="btn btn-primary" ng-click="oauthLogin('facebook')">Facebook</button>-->
+<!--    <button  class="btn btn-primary" ng-click="oauthLogin('google')">Google</button>-->
+<!--    <button  class="btn btn-primary" ng-click="oauthLogin('twitter')">Twitter</button>-->
+<!--    <button  class="btn btn-primary" ng-click="oauthLogin('github')">GitHub</button>-->
+<!--  </p>-->
+<!--</fieldset>-->
+
+<form role="form">
+
+    <label class="item item-input" for="loginEmail">
+      <input required name="email" type="email" ng-model="email" class="form-control" placeholder="Email" />
+    </label>
+    <label class="item item-input">
+      <input id="loginPass" required name="pass" type="password" ng-model="pass" class="form-control" placeholder="Password" />
+    </label>
+
+  <div ng-cloak ng-show="createMode">
+    <label class="item item-input">
+      <input id="loginConfirm" placeholder="Confirm Password" required name="confirm" type="password" ng-model="confirm" class="form-control" />
+    </label>
+    <label class="item item-input">
+      <input id="firstName" placeholder="First Name" required name="firstName" type="text" ng-model="firstName" class="form-control" />
+    </label>
+    <label class="item item-input">
+      <input id="lastName" placeholder="Last Name" required name="lastName" type="text" ng-model="lastName" class="form-control" />
+    </label>
+   <label class="item item-input">
+      <input id="userName" placeholder="User Name" required name="userName" type="text" ng-model="userName" class="form-control" />
+    </label>
+    <ion-list>
+      <ion-checkbox type="checkbox" ng-model="termsConditions">Terms and stuff</ion-checkbox>
+    </ion-list>
+  </div>
+
+  <p>
+    <button class="button button-full button-positive" ng-click="passwordLogin(email, pass)" ng-hide="createMode">Log In</button>
+    <button class="button button-full button-dark" ng-click="createMode = true" ng-hide="createMode">Register</button>
+    <button class="button button-full button-positive" ng-cloak ng-show="createMode"
+            ng-click="createAccount(email, pass, confirm, firstName, lastName, userName, termsConditions)">Create Account</button>
+    <button class="button button-full button-dark" ng-cloak ng-show="createMode" ng-click="createMode = false">Cancel</button>
+  </p>
+</form>
+<button ng-show="err" class="button button-clear button-full button-assertive">
+  {{err}}
+</button>
+        </ion-content>
+</ion-view>
