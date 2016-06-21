@@ -98,7 +98,7 @@ angular.module('starter')
       }
 
       function createProfile(authData) {
-        var profile = new Firebase('https://blistering-torch-3665.firebaseio.firebaseio.com/profile/' + authData.uid);
+        var profile = new Firebase('https://blistering-torch-3665.firebaseio.com/profile/' + authData.uid);
         // var profile = $firebaseArray(Ref.child('profile/' + authData.uid));
         profile.set({
           email: email,

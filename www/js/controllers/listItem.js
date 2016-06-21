@@ -29,7 +29,7 @@ angular.module('starter')
 	geerItems.$add({ owner: authData.uid }).then(function(ref) {
 		var id = ref.key();
 		console.log("added record with id " + id);
-		var ref = new Firebase('https://blistering-torch-3665.firebaseio.firebaseio.com/products/' + id);
+		var ref = new Firebase('https://blistering-torch-3665.firebaseio.com/products/' + id);
 		// var images = ref.child('images');
 		
 		

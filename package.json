@@ -22,5 +22,8 @@
     "ionic-plugin-keyboard",
     "cordova-plugin-file-transfer"
   ],
-  "cordovaPlatforms": []
+  "cordovaPlatforms": [
+    "ios",
+    "android"
+  ]
 }
