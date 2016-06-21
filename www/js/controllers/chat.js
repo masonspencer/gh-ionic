@@ -34,7 +34,7 @@ angular.module('starter')
               console.log('me');
             }
             else {
-              var userRef = new Firebase('https://blistering-torch-3665.firebaseio.com/profile/' + data[i].$value);
+              var userRef = new Firebase('https://blistering-torch-3665.firebaseio.firebaseio.com/profile/' + data[i].$value);
               userRef.once('value', function(snap) {
                 console.log(snap.val().userName);
                 $scope.conversations[key].push(snap.val().userName);

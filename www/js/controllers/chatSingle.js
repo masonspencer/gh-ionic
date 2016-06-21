@@ -20,7 +20,7 @@ angular.module('starter')
         angular.forEach(data, function(value, key) {
           $scope.messages.push(value);
           // $scope.messages.push(value);
-              var userRef = new Firebase('https://blistering-torch-3665.firebaseio.com/profile/' + value.author);
+              var userRef = new Firebase('https://blistering-torch-3665.firebaseio.firebaseio.com/profile/' + value.author);
               userRef.once('value', function(snap) {
                 $scope.messages[key].userName = snap.val().userName;
                 $scope.messages[key].gravatar = snap.val().gravatar;

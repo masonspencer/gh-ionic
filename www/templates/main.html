@@ -12,7 +12,7 @@
       <p>{{product.name}}</p>
       <p>{{product.price | currency : product.currency  : 2 }}</p>
     <a ui-sref="product({ itemID: product.$id })">
-    <img class="full-image" ng-src="{{product.images[0]}}"></a>
+    <img class="full-image" ng-src="data:image/png;base64,{{product.images[0]}}"></a>
     <p>
       {{product.description}}
     </p>

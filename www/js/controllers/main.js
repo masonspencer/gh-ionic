@@ -33,7 +33,7 @@ angular.module('starter')
     
     // $scope.getImage = function (productId) {
     //   // Get a database reference to our posts
-    //   var ref = new Firebase('https://blistering-torch-3665.firebaseio.com/products/' + productId + '/images');
+    //   var ref = new Firebase('https://blistering-torch-3665.firebaseio.firebaseio.com/products/' + productId + '/images');
     //   // Attach an asynchronous callback to read the data at our posts reference
     //   ref.limitToLast(1).on("value", function(snapshot) {
     //     console.log(snapshot.val());

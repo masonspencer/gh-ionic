@@ -37,18 +37,18 @@ angular.module('starter')
         var id = ref.key();
         console.log("added record with id " + id);
         conversations.$indexFor(id); // returns location in the array
-        var profileConversations = new Firebase('https://blistering-torch-3665.firebaseio.com/profile/' + authData.uid + '/conversations/');
+        var profileConversations = new Firebase('https://blistering-torch-3665.firebaseio.firebaseio.com/profile/' + authData.uid + '/conversations/');
         var conversation = {}; 
         conversation[id] = true; 
           profileConversations.update(conversation);
         
         
-        var ownerProfileConversations = new Firebase('https://blistering-torch-3665.firebaseio.com/profile/' + $scope.product.owner + '/conversations/');
+        var ownerProfileConversations = new Firebase('https://blistering-torch-3665.firebaseio.firebaseio.com/profile/' + $scope.product.owner + '/conversations/');
         var ownerProfileConversation = {}; 
         ownerProfileConversation[id] = true; 
         ownerProfileConversations.update(ownerProfileConversation);
         
-        $state.go('chatSingle', {'conversationId': id});
+        $state.transitionTo('chatSingle', {conversationId: id}, { reload: true, inherit: false, notify: true });
         // $location.path('/chatSingle/' + id);
       });
   }

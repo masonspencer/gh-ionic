@@ -15,14 +15,16 @@
       {{product.name}}
     </ion-nav-title>
         <ion-content class="padding has-header">
-        	<ion-slide-box>
-			  <ion-slide ng-repeat="image in product.images">
-			  	<img width="100%" ng-src="data:image/jpeg;base64,{{image}}" />
-			</ion-slide>
+        	<!--<ion-slide-box>-->
+			  <!--<ion-slide >-->
+			  <div ng-repeat="image in product.images">
+			  	<img width="100%" data-ng-src="data:image/jpeg;base64,{{image}}" />
+			  	</div>
+			<!--</ion-slide>-->
 			  <!--<ion-slide><img width="100%" src="http://geerhunter.com/app/assets/ecommerce/1.jpg" /></ion-slide>-->
 			  <!--<ion-slide><img width="100%" src="http://geerhunter.com/app/assets/ecommerce/1.jpg" /></ion-slide>-->
 			  <!--<ion-slide><img width="100%" src="http://geerhunter.com/app/assets/ecommerce/1.jpg" /></ion-slide>-->
-			</ion-slide-box>
+			<!--</ion-slide-box>-->
 		
 		<button class="button button-block button-positive" ng-click="newConversation()">
 			<i class="icon ion-ios-cart"></i> Make Offer
