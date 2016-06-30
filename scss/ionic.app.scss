@@ -15,8 +15,25 @@ $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
 
+$light:                           #f7f7f2 !default;
+$stable:                          #C5D86D !default;
+$positive:                        #AAAE7F !default;
+$calm:                            #E4E6C3 !default;
+$balanced:                        #43453A !default;
+$energized:                       #FF8552 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #297373 !default;
+$dark:                            #2D3027 !default;
+
+
+
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
+
+// Dark theme for backgrounds.
+.menu, .tabs{
+  background: $dark;
+}

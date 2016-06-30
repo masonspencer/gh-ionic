@@ -141,7 +141,36 @@ angular.module('starter', [
           }]
         }
     })
-    .state('chatSingle', {
+    
+    .state('blog', {
+      url: '/blog',
+        templateUrl: 'templates/blog.html',
+        controller: 'BlogCtrl',
+        resolve: {
+        // controller will not be loaded until $waitForAuth resolves
+        // Auth refers to our $firebaseAuth wrapper in the example above
+        "currentAuth": ["Auth", function(Auth) {
+          // $waitForAuth returns a promise so the resolve waits for it to complete
+          return Auth.$waitForAuth();
+        }]
+      }
+    })
+    
+    .state('article', {
+      url: '/article/:articleId',
+        templateUrl: 'templates/article.html',
+        controller: 'ArticleCtrl',
+        resolve: {
+        // controller will not be loaded until $waitForAuth resolves
+        // Auth refers to our $firebaseAuth wrapper in the example above
+        "currentAuth": ["Auth", function(Auth) {
+          // $waitForAuth returns a promise so the resolve waits for it to complete
+          return Auth.$waitForAuth();
+        }]
+      }
+    })
+    
+        .state('chatSingle', {
       url: '/chat/:conversationId',
         templateUrl: 'templates/chatSingle.html',
         controller: 'ChatSingleCtrl',
